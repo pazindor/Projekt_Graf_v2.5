@@ -1,0 +1,81 @@
+﻿  Metis.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include\metis.h(75,1): warning C4005: "INT32_MIN": ponowna definicja makra
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include\stdint.h(47): message : zobacz poprzednią definicję „INT32_MIN”
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include\metis.h(76,1): warning C4005: "INT32_MAX": ponowna definicja makra
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include\stdint.h(51): message : zobacz poprzednią definicję „INT32_MAX”
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include\metis.h(77,1): warning C4005: "INT64_MIN": ponowna definicja makra
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include\stdint.h(48): message : zobacz poprzednią definicję „INT64_MIN”
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include\metis.h(78,1): warning C4005: "INT64_MAX": ponowna definicja makra
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include\stdint.h(52): message : zobacz poprzednią definicję „INT64_MAX”
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Bartek\Metis.cpp(45,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Bartek\Metis.cpp(51,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Bartek\Metis.cpp(55,21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Bartek\Metis.cpp(61,22): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Bartek\Metis.cpp(75,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Bartek\Metis.cpp(80,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Bartek\Metis.cpp(81,21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Bartek\Metis.cpp(87,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Bartek\Metis.cpp(96,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Bartek\Metis.cpp(97,21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Bartek\Metis.cpp(104,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Bartek\Metis.cpp(108,21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Bartek\Metis.cpp(131,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Bartek\Metis.cpp(136,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Bartek\Metis.cpp(137,21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Bartek\Metis.cpp(143,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Bartek\Metis.cpp(152,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Bartek\Metis.cpp(153,21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Bartek\Metis.cpp(160,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Bartek\Metis.cpp(161,21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Bartek\Metis.cpp(238,22): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Bartek\Metis.cpp(242,24): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Bartek\Metis.cpp(257,21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Bartek\Metis.cpp(262,21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  znajdz_funkcje_i_wagi_pomiedzy_plikami.cpp
+  policz_linijki_kodu.cpp
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Ewelina\policz_linijki_kodu.cpp(8,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  rysuj_graf.cpp
+  znajdz_polaczenia_miedzy_funkcjami.cpp
+  Pozyskanie_wstepnych_danych.cpp
+  przygotuj_txt_dla_paradigma.cpp
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Patryk\przygotuj_txt_dla_paradigma.cpp(76,23): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  przypisuje_funkcje_i_pliki_do_modulow.cpp
+  zamiana_na_stringi_do_graphitza.cpp
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Patryk\zamiana_na_stringi_do_graphitza.cpp(48,23): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  znajdz_polaczenia_pomiedzy_plikami.cpp
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Patryk\znajdz_polaczenia_pomiedzy_plikami.cpp(19,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Patryk\znajdz_polaczenia_pomiedzy_plikami.cpp(71,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Patryk\znajdz_polaczenia_pomiedzy_plikami.cpp(73,21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  polaczenie_modulu_z_plikiem.cpp
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Wicher\polaczenie_modulu_z_plikiem.cpp(9,26): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Wicher\polaczenie_modulu_z_plikiem.cpp(13,51): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Wicher\polaczenie_modulu_z_plikiem.cpp(18,37): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Wicher\polaczenie_modulu_z_plikiem.cpp(20,48): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Wicher\polaczenie_modulu_z_plikiem.cpp(33,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Wicher\polaczenie_modulu_z_plikiem.cpp(35,21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Wicher\polaczenie_modulu_z_plikiem.cpp(37,22): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  Funkcja.cpp
+  Modul.cpp
+  Plik.cpp
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Wojtas\Plik.cpp(96,47): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Wojtas\Plik.cpp(98,28): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Wojtas\Plik.cpp(112,24): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  wykonaj.cpp
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Wojtas\wykonaj.cpp(19,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Wojtas\wykonaj.cpp(25,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Wojtas\wykonaj.cpp(27,21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Wojtas\wykonaj.cpp(34,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Wojtas\wykonaj.cpp(36,21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Wojtas\wykonaj.cpp(43,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Wojtas\wykonaj.cpp(45,21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  znajdz_definicje_funkcji.cpp
+  znajdz_elementy_przestrzeni_nazw.cpp
+  znajdz_przestrzenie_nazw.cpp
+C:\Users\xxpaz\Desktop\Projekt\Projekt\Wojtas\znajdz_przestrzenie_nazw.cpp(28,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  main.cpp
+  Trwa generowanie kodu
+  1 of 754 functions ( 0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    46 functions had inline decision re-evaluated but remain unchanged
+  Zakończono generowanie kodu
+  Projekt.vcxproj -> C:\Users\xxpaz\Desktop\Projekt\Release\Projekt.exe
