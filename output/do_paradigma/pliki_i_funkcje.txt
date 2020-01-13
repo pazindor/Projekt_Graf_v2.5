@@ -1,0 +1,91 @@
+main.cpp(19)->Graf.h(149) : [1]
+main.cpp(19)->menu.h(4) : [1]
+Graf.h(149)->Funkcje_od_stringow.h(19) : [1]
+Metis.cpp(312)->Graf.h(149) : [1]
+znajdz_funkcje_i_wagi_pomiedzy_plikami.cpp(26)->Graf.h(149) : [1]
+menu.cpp(74)->menu.h(4) : [1]
+policz_linijki_kodu.cpp(29)->Graf.h(149) : [1]
+rysuj_graf.cpp(31)->Graf.h(149) : [1]
+znajdz_polaczenia_miedzy_funkcjami.cpp(38)->Graf.h(149) : [1]
+Pozyskanie_wstepnych_danych.cpp(131)->Graf.h(149) : [1]
+przygotuj_txt_dla_paradigma.cpp(143)->Graf.h(149) : [1]
+przypisuje_funkcje_i_pliki_do_modulow.cpp(74)->Graf.h(149) : [1]
+zamiana_na_stringi_do_graphitza.cpp(261)->Graf.h(149) : [1]
+znajdz_polaczenia_pomiedzy_plikami.cpp(80)->Graf.h(149) : [1]
+polaczenie_modulu_z_plikiem.cpp(43)->Graf.h(149) : [1]
+Funkcja.cpp(48)->Graf.h(149) : [1]
+Funkcje_do_stringow.cpp(78)->Funkcje_od_stringow.h(19) : [1]
+Modul.cpp(99)->Graf.h(149) : [1]
+Plik.cpp(146)->Graf.h(149) : [1]
+wykonaj.cpp(54)->Graf.h(149) : [1]
+znajdz_definicje_funkcji.cpp(46)->Graf.h(149) : [1]
+znajdz_elementy_przestrzeni_nazw.cpp(37)->Graf.h(149) : [1]
+znajdz_przestrzenie_nazw.cpp(31)->Graf.h(149) : [1]
+main->menu : [1]
+graf::Graf::przygotujPlikZFunkcjamiDlaMetisa->part : [1]
+graf::Graf::przypisuje_funkcje_i_pliki_do_modulow->Wojtas::wycinanie_rekurencyjne : [1]
+graf::Graf::znajdz_polaczenia_pomiedzy_plikami->Wojtas::wycinanie_rekurencyjne : [2]
+graf::Graf::znajdz_polaczenia_pomiedzy_plikami->Wojtas::dzielenie_na_slowa : [1]
+graf::Graf::polaczenie_modulu_z_plikiem->Wojtas::dzielenie_na_slowa : [1]
+funkcja::Funkcja::znajdz_polaczone_funkcje->Wojtas::dzielenie_na_slowa : [1]
+funkcja::Funkcja::znajdz_polaczone_funkcje->Wojtas::usuwanie_tabulacji : [1]
+funkcja::Funkcja::znajdz_polaczone_funkcje->Wojtas::odcinanie_poczatku : [2]
+funkcja::Funkcja::znajdz_polaczone_funkcje->Wojtas::szukanie_klamer : [2]
+modul::Modul::znajdz_elementy_modulu->Wojtas::dzielenie_na_slowa : [2]
+modul::Modul::znajdz_elementy_modulu->Wojtas::usuwanie_tabulacji : [2]
+modul::Modul::znajdz_elementy_modulu->Wojtas::odcinanie_koncowki : [2]
+modul::Modul::znajdz_elementy_modulu->Wojtas::szukanie_klamer : [2]
+modul::Modul::znajdz_funkcje_w_module->Wojtas::odcinanie_koncowki : [1]
+plik::Plik::znajdz_funkcje_w_pliku->Wojtas::dzielenie_na_slowa : [3]
+plik::Plik::znajdz_funkcje_w_pliku->Wojtas::usuwanie_tabulacji : [1]
+plik::Plik::znajdz_funkcje_w_pliku->Wojtas::odcinanie_koncowki : [2]
+plik::Plik::znajdz_funkcje_w_pliku->Wojtas::szukanie_klamer : [2]
+plik::Plik::zdefiniuj_nazwe_funkcji_z_modulu->Wojtas::odcinanie_koncowki : [1]
+plik::Plik::znajdz_moduly->Wojtas::dzielenie_na_slowa : [1]
+plik::Plik::znajdz_moduly->Wojtas::usuwanie_tabulacji : [1]
+plik::Plik::znajdz_moduly->Wojtas::odcinanie_koncowki : [2]
+main.cpp(19)"->"main : 
+Metis.cpp(312)"->"graf::Graf::przygotujPlikZFunkcjamiDlaMetisa : 
+Metis.cpp(312)"->"part : 
+znajdz_funkcje_i_wagi_pomiedzy_plikami.cpp(26)"->"graf::Graf::znajdz_funkcje_i_wagi_pomiedzy_plikami : 
+menu.cpp(74)"->"menu : 
+policz_linijki_kodu.cpp(29)"->"graf::Graf::policz_linijki_kodu_dla_pliku : 
+menu.h(4)"->"menu : 
+rysuj_graf.cpp(31)"->"graf::Graf::rysuj_graf : 
+znajdz_polaczenia_miedzy_funkcjami.cpp(38)"->"graf::Graf::znajdz_polaczenia_miedzy_funkcjami : 
+Pozyskanie_wstepnych_danych.cpp(131)"->"graf::Graf::poszukaj_katalogow : 
+Pozyskanie_wstepnych_danych.cpp(131)"->"graf::Graf::sprawdz_czy_cos_jest_w_inpucie : 
+Pozyskanie_wstepnych_danych.cpp(131)"->"graf::Graf::znajdz_pliki : 
+przygotuj_txt_dla_paradigma.cpp(143)"->"graf::Graf::przygotuj_txt_dla_funkcji_do_visual_paradigma : 
+przygotuj_txt_dla_paradigma.cpp(143)"->"graf::Graf::przygotuj_txt_dla_plikow_do_visual_paradigma : 
+przygotuj_txt_dla_paradigma.cpp(143)"->"graf::Graf::przygotuj_txt_dla_plikow_i_funkcji_do_visual_paradigma : 
+przypisuje_funkcje_i_pliki_do_modulow.cpp(74)"->"graf::Graf::przypisuje_funkcje_i_pliki_do_modulow : 
+zamiana_na_stringi_do_graphitza.cpp(261)"->"graf::Graf::zamien_na_string_dla_plikow_do_grafu : 
+zamiana_na_stringi_do_graphitza.cpp(261)"->"graf::Graf::zamien_na_string_dla_funkcji_do_grafu : 
+zamiana_na_stringi_do_graphitza.cpp(261)"->"graf::Graf::zamien_na_string_dla_modulu : 
+zamiana_na_stringi_do_graphitza.cpp(261)"->"graf::Graf::string_dla_plikow_i_funkcji : 
+zamiana_na_stringi_do_graphitza.cpp(261)"->"graf::Graf::string_dla_plikow_i_modulu : 
+zamiana_na_stringi_do_graphitza.cpp(261)"->"graf::Graf::string_dla_funkcji_i_modulu : 
+zamiana_na_stringi_do_graphitza.cpp(261)"->"graf::Graf::string_dla_wszystkiego : 
+znajdz_polaczenia_pomiedzy_plikami.cpp(80)"->"graf::Graf::znajdz_polaczenia_pomiedzy_plikami : 
+polaczenie_modulu_z_plikiem.cpp(43)"->"graf::Graf::polaczenie_modulu_z_plikiem : 
+Funkcja.cpp(48)"->"funkcja::Funkcja::znajdz_polaczone_funkcje : 
+Funkcje_do_stringow.cpp(78)"->"Wojtas::wycinanie_rekurencyjne : 
+Modul.cpp(99)"->"modul::Modul::znajdz_elementy_modulu : 
+Modul.cpp(99)"->"modul::Modul::znajdz_funkcje_w_module : 
+Modul.cpp(99)"->"modul::Modul::dodaj_niepowtarzajacy_sie_modul : 
+Plik.cpp(146)"->"plik::Plik::znajdz_funkcje_w_pliku : 
+Plik.cpp(146)"->"plik::Plik::zdefiniuj_nazwe_funkcji_z_modulu : 
+Plik.cpp(146)"->"plik::Plik::dodaj_niepowtarzajaca_sie_funkcje : 
+Plik.cpp(146)"->"plik::Plik::znajdz_moduly : 
+wykonaj.cpp(54)"->"graf::Graf::wykonaj : 
+wykonaj.cpp(54)"->"graf::Graf::usun_tempa : 
+znajdz_definicje_funkcji.cpp(46)"->"graf::Graf::znajdz_definicje_funkcji : 
+znajdz_elementy_przestrzeni_nazw.cpp(37)"->"graf::Graf::znajdz_elementy_przestrzeni_nazw : 
+znajdz_przestrzenie_nazw.cpp(31)"->"graf::Graf::znajdz_przestrzenie_nazw : 
+Funkcje_od_stringow.h(19)"->"Wojtas::dzielenie_na_slowa : 
+Funkcje_od_stringow.h(19)"->"Wojtas::usuwanie_tabulacji : 
+Funkcje_od_stringow.h(19)"->"Wojtas::odcinanie_koncowki : 
+Funkcje_od_stringow.h(19)"->"Wojtas::odcinanie_poczatku : 
+Funkcje_od_stringow.h(19)"->"Wojtas::szukanie_klamer : 
+Funkcje_od_stringow.h(19)"->"Wojtas::wycinanie_rekurencyjne : 
