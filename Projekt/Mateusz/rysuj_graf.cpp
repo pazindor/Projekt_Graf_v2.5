@@ -28,3 +28,11 @@ void graf::Graf::rysuj_graf(std::string do_rysowania_graphu, std::string nazwa_p
 }
 
 
+
+
+
+
+
+//
+
+
