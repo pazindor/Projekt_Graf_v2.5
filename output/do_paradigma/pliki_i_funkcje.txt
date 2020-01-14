@@ -5,7 +5,7 @@ Metis.cpp(312)->Graf.h(149) : [1]
 znajdz_funkcje_i_wagi_pomiedzy_plikami.cpp(26)->Graf.h(149) : [1]
 menu.cpp(74)->menu.h(4) : [1]
 policz_linijki_kodu.cpp(29)->Graf.h(149) : [1]
-rysuj_graf.cpp(31)->Graf.h(149) : [1]
+rysuj_graf.cpp(39)->Graf.h(149) : [1]
 znajdz_polaczenia_miedzy_funkcjami.cpp(38)->Graf.h(149) : [1]
 Pozyskanie_wstepnych_danych.cpp(131)->Graf.h(149) : [1]
 przygotuj_txt_dla_paradigma.cpp(143)->Graf.h(149) : [1]
@@ -51,7 +51,8 @@ znajdz_funkcje_i_wagi_pomiedzy_plikami.cpp(26)"->"graf::Graf::znajdz_funkcje_i_w
 menu.cpp(74)"->"menu : 
 policz_linijki_kodu.cpp(29)"->"graf::Graf::policz_linijki_kodu_dla_pliku : 
 menu.h(4)"->"menu : 
-rysuj_graf.cpp(31)"->"graf::Graf::rysuj_graf : 
+rysuj_graf.cpp(39)"->"graf::Graf::rysuj_graf : 
+rysuj_graf.cpp(39)"->"pusta_fun : 
 znajdz_polaczenia_miedzy_funkcjami.cpp(38)"->"graf::Graf::znajdz_polaczenia_miedzy_funkcjami : 
 Pozyskanie_wstepnych_danych.cpp(131)"->"graf::Graf::poszukaj_katalogow : 
 Pozyskanie_wstepnych_danych.cpp(131)"->"graf::Graf::sprawdz_czy_cos_jest_w_inpucie : 
