@@ -29,10 +29,3 @@ void graf::Graf::rysuj_graf(std::string do_rysowania_graphu, std::string nazwa_p
 
 
 
-
-void pusta_fun(int cps)
-{
-	cout << "Lpl";
-}
-
-
