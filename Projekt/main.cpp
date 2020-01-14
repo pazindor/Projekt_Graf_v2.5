@@ -16,3 +16,8 @@ int main() {
 	
 	return 0;
 }
+
+void zmiana()
+{
+	cout << "lol";
+}
