@@ -25,9 +25,11 @@ namespace funkcja {
 	struct Funkcja {
 		std::string nazwa_funkcji;
 		std::vector<polaczenie::Polaczenie> polaczenia_miedzy_funkcjami;
+		int zlozonosc;
 		Funkcja(std::string a) {
 			nazwa_funkcji = a;
 			polaczenia_miedzy_funkcjami = {};
+			zlozonosc = 1;
 		}
 		void znajdz_polaczone_funkcje(Funkcja sprawdzana_fun, std::fstream& otwarty_plik);
 	};
@@ -123,6 +125,8 @@ namespace graf {
 		void znajdz_elementy_przestrzeni_nazw();							//                 || -> Wojtek
 
 		void polaczenie_modulu_z_plikiem();//												   || -> Mateusz Wicherski
+
+		void zlozonosc_cyklomatyczna();//													   || -> Mateusz Wicherski
 
 		//Zajmuja sie edycja danych by pasowaly one do visual paradigma
 		std::string przygotuj_txt_dla_plikow_do_visual_paradigma();//							   || -> Patryk B³oniarz

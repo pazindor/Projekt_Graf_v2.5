@@ -32,6 +32,7 @@
     <ClCompile Include="Patryk\przypisuje_funkcje_i_pliki_do_modulow.cpp" />
     <ClCompile Include="Patryk\znajdz_polaczenia_pomiedzy_plikami.cpp" />
     <ClCompile Include="Wicher\polaczenie_modulu_z_plikiem.cpp" />
+    <ClCompile Include="Wicher\zlozonosc_cyklomatyczna.cpp" />
     <ClCompile Include="Wojtas\Funkcja.cpp" />
     <ClCompile Include="Wojtas\Funkcje_do_stringow.cpp" />
     <ClCompile Include="Wojtas\Modul.cpp" />

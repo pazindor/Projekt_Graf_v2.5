@@ -10,6 +10,8 @@ void graf::Graf::wykonaj() {
 	znajdz_definicje_funkcji();
 	znajdz_funkcje_i_wagi_pomiedzy_plikami();
 	znajdz_polaczenia_miedzy_funkcjami();
+	zlozonosc_cyklomatyczna();
+
 
 	znajdz_przestrzenie_nazw();
 	znajdz_elementy_przestrzeni_nazw();

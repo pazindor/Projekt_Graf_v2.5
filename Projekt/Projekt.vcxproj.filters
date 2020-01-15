@@ -102,6 +102,9 @@
     <ClCompile Include="Patryk\przypisuje_funkcje_i_pliki_do_modulow.cpp">
       <Filter>Pliki zasobów\Patryk</Filter>
     </ClCompile>
+    <ClCompile Include="Wicher\zlozonosc_cyklomatyczna.cpp">
+      <Filter>Pliki zasobów\Wicher</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Wojtas\Funkcje_od_stringow.h">
