@@ -93,6 +93,7 @@ namespace graf {
 		std::vector<funkcja::Funkcja> wszystkie_funkcje_we_wszystkich_plikach;
 		std::vector<plik::Plik> pliki;
 		std::vector<modul::Modul> przestrzenie_nazw;
+		std::string version;
 
 		//znajduje pliki w folderze : dodaje znalezione do vectora Graf::pliki definiujac nazwe w konstruktorze
 		void znajdz_pliki(const string sciezka);     //                                                            || -> Patryk
@@ -142,6 +143,8 @@ namespace graf {
 		std::string string_dla_funkcji_i_modulu(string, string);//							   || -> Patryk B³oniarz
 
 		std::string przygotujPlikZFunkcjamiDlaMetisa();//									   || -> Bartlomiej Zieja
+
+		void pobierzWersjeGrafu();	//													|| Ewelina Szczupak
 
 		void rysuj_graf(std::string do_rysowania_grafu, std::string nazwa_pliku);//GOTOWE      || -> Matuesz Wich i Wojtek // Mateusz Witkowski
 

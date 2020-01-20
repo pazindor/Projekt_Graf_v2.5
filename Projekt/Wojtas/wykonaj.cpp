@@ -18,6 +18,8 @@ void graf::Graf::wykonaj() {
 	przypisuje_funkcje_i_pliki_do_modulow();
 	polaczenie_modulu_z_plikiem();
 
+	pobierzWersjeGrafu();
+	
 	std::string graf_pliki = zamien_na_string_dla_plikow_do_grafu();
 	std::string graf_funkcje = zamien_na_string_dla_funkcji_do_grafu();
 	std::string graf_modul = zamien_na_string_dla_modulu();

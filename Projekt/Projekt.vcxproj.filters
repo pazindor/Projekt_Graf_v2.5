@@ -105,6 +105,9 @@
     <ClCompile Include="Wicher\zlozonosc_cyklomatyczna.cpp">
       <Filter>Pliki zasobów\Wicher</Filter>
     </ClCompile>
+    <ClCompile Include="Ewelina\aktualna_wersja_gita.cpp">
+      <Filter>Pliki zasobów\Ewelina</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Wojtas\Funkcje_od_stringow.h">

@@ -5,7 +5,7 @@ using namespace std;
 
 void menu() {
 	char wybor;
-	for (;;)
+	for (;;) 
 	{
 		cout << "MENU GLOWNE" << endl;
 		cout << "-----------------" << endl;

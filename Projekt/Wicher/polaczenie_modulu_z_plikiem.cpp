@@ -30,7 +30,7 @@ void graf::Graf::polaczenie_modulu_z_plikiem()
 		} otwarty_plik.close();
 	}
 	//Sprawdzenie
-	for (int i = 0; i < pliki.size(); i++)
+	/*for (int i = 0; i < pliki.size(); i++)
 	{
 		for (int j = 0; j < pliki[i].namespacey.size(); j++)
 		{
@@ -39,5 +39,5 @@ void graf::Graf::polaczenie_modulu_z_plikiem()
 				std::cout << pliki[i].namespacey[j].polaczenia_miedzy_namespaceami[k].nazwa_polaczonego_elementu << std::endl;
 			}
 		}
-	}
+	}*/
 }

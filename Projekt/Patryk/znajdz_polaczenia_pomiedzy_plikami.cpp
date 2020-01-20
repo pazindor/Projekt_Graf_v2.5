@@ -68,13 +68,13 @@ void graf::Graf::znajdz_polaczenia_pomiedzy_plikami()
 
 
 	//sprawdzanie(wypisanie)
-	for (int i = 0; i < pliki.size(); i++)
+	/*for (int i = 0; i < pliki.size(); i++)
 	{
 		for (int j = 0; j < pliki[i].polaczenia_miedzy_plikami.size(); j++)
 		{
 			cout <<pliki[i].nazwa_pliku<<": " <<pliki[i].polaczenia_miedzy_plikami[j].nazwa_polaczonego_elementu << endl;
 		}
 
-	}
+	}*/
 
 };

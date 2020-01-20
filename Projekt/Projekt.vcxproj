@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="Bartek\Metis.cpp" />
     <ClCompile Include="Bartek\znajdz_funkcje_i_wagi_pomiedzy_plikami.cpp" />
+    <ClCompile Include="Ewelina\aktualna_wersja_gita.cpp" />
     <ClCompile Include="Ewelina\menu.cpp" />
     <ClCompile Include="Ewelina\policz_linijki_kodu.cpp" />
     <ClCompile Include="main.cpp" />

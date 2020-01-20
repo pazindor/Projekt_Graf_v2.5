@@ -39,9 +39,9 @@ for (int plik = 0; plik < pliki.size(); plik++)	//iteruje po kolei dla kazdego p
 					if (slowa_w_linii[nr_slowa] == slowa_klucze[1] || slowa_w_linii[nr_slowa] == slowa_klucze[2])
 					{
 						wszystkie_funkcje_we_wszystkich_plikach[ktora_funkcja].zlozonosc++;
-						cout << wszystkie_funkcje_we_wszystkich_plikach[ktora_funkcja].nazwa_funkcji << " -> " << wszystkie_funkcje_we_wszystkich_plikach[ktora_funkcja].zlozonosc << endl;
+						//cout << wszystkie_funkcje_we_wszystkich_plikach[ktora_funkcja].nazwa_funkcji << " -> " << wszystkie_funkcje_we_wszystkich_plikach[ktora_funkcja].zlozonosc << endl;
 					}
-					cout << wszystkie_funkcje_we_wszystkich_plikach[ktora_funkcja].nazwa_funkcji << " -> " << wszystkie_funkcje_we_wszystkich_plikach[ktora_funkcja].zlozonosc << endl;
+					//cout << wszystkie_funkcje_we_wszystkich_plikach[ktora_funkcja].nazwa_funkcji << " -> " << wszystkie_funkcje_we_wszystkich_plikach[ktora_funkcja].zlozonosc << endl;
 				}
 				//cout << wszystkie_funkcje_we_wszystkich_plikach[ktora_funkcja].nazwa_funkcji << " -> " << wszystkie_funkcje_we_wszystkich_plikach[ktora_funkcja].zlozonosc << endl;
 			}
