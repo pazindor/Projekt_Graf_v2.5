@@ -16,10 +16,17 @@ void plik::Plik::znajdz_funkcje_w_pliku() {
 		getline(plik_operacyjny, linia);
 		std::vector<std::string> slowa_linijki = Wojtas::dzielenie_na_slowa(linia);
 		int i = 0;
-		for (auto& _przed : przedrostki) {
-			if (slowa_linijki[i].find(_przed) != std::string::npos) {
-				i++;
+		int licznik = 0;
+		while(i < slowa_linijki.size()) {
+			for (auto& _przed : przedrostki) {
+				if (slowa_linijki[i].find(_przed) == std::string::npos) {
+					licznik++;
+				}
 			}
+			if (licznik == przedrostki.size())
+				break;
+			else
+				i++;
 		}
 
 		for (auto& _key : key_words) {
