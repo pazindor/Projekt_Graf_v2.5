@@ -2,45 +2,64 @@
 #include "..\Graf.h"
 
 void graf::Graf::wykonaj() {
+	
+	cout << "Witam rozpoczynam prace..." << endl;
 	CreateDirectoryA("..\\temp", NULL);
-	sprawdz_czy_cos_jest_w_inpucie();
+	
+	pobierzWersjeGrafu();
 	policz_linijki_kodu_dla_pliku();
 	znajdz_polaczenia_pomiedzy_plikami();
 
 	znajdz_definicje_funkcji();
 	znajdz_funkcje_i_wagi_pomiedzy_plikami();
 	znajdz_polaczenia_miedzy_funkcjami();
-	zlozonosc_cyklomatyczna();
-
+	//zlozonosc_cyklomatyczna();
+	zlozonosc_na_stringa();
 
 	znajdz_przestrzenie_nazw();
 	znajdz_elementy_przestrzeni_nazw();
-	przypisuje_funkcje_i_pliki_do_modulow();
-	polaczenie_modulu_z_plikiem();
-
-	pobierzWersjeGrafu();
 	
+	kopiowanie_do_funkcji();
+
+	polaczenia_i_wagi_modulow();
+
+	cout << "Rozpoczynam proces rysowania grafu to moze chwile potrwac..." << endl;
+
 	std::string graf_pliki = zamien_na_string_dla_plikow_do_grafu();
 	std::string graf_funkcje = zamien_na_string_dla_funkcji_do_grafu();
 	std::string graf_modul = zamien_na_string_dla_modulu();
+	std::string graf_bez_polaczen = string_dla_funkcji_i_modulu_bez_polaczen(graf_modul);
 	std::string graf_pliki_funkcje = string_dla_plikow_i_funkcji(graf_pliki, graf_funkcje);
-	std::string graf_pliki_moduly = string_dla_plikow_i_modulu(graf_pliki, graf_modul);
-	std::string graf_funkcjie_moduly = string_dla_funkcji_i_modulu(graf_funkcje, graf_modul);
-	std::string graf_wszystkego = string_dla_wszystkiego(graf_pliki_funkcje, graf_pliki_moduly, graf_funkcjie_moduly);
-	//std::string graf_metis_funkcje = przygotujPlikZFunkcjamiDlaMetisa();
+	std::string graf_funkcje_moduly = string_dla_funkcji_i_modulu(graf_funkcje, graf_modul);
+	std::string graf_pliki_modul = string_dla_plikow_i_modulu(graf_pliki, graf_modul);
+	std::string graf_metis_funkcje = przygotujPlikZFunkcjamiDlaMetisa();
+	std::string graf_wszystko = string_dla_wszystkiego(graf_pliki_funkcje, graf_funkcje_moduly);
 
 	std::string do_txt_funkcje = przygotuj_txt_dla_funkcji_do_visual_paradigma();
 	std::string do_txt_pliki = przygotuj_txt_dla_plikow_do_visual_paradigma();
-	przygotuj_txt_dla_plikow_i_funkcji_do_visual_paradigma(do_txt_pliki, do_txt_funkcje);
+	std::string do_txt_moduly = przygotuj_txt_dla_modulu_do_visual_paradigma();
+	std::string do_txt_pliki_funkcje = przygotuj_txt_dla_plikow_i_funkcji_do_visual_paradigma(do_txt_pliki, do_txt_funkcje);
+	std::string do_txt_moduly_funkcje = przygotuj_txt_dla_modulow_i_funkcji_do_visual_paradigma(do_txt_moduly, do_txt_funkcje);
+	przygotuj_txt_dla_wszystkiego_do_visual_paradigma(do_txt_pliki_funkcje, do_txt_moduly_funkcje);
 
-	rysuj_graf(graf_pliki, "graf_plikow");
-	rysuj_graf(graf_funkcje, "graf_funkcji");
-	rysuj_graf(graf_modul, "graf_modulu");
-	rysuj_graf(graf_pliki_funkcje, "graf_pliki_funkcje");
-	rysuj_graf(graf_pliki_moduly, "graf_pliki_moduly");
-	rysuj_graf(graf_funkcjie_moduly, "graf_funkcje_moduly");
-	rysuj_graf(graf_wszystkego, "graf_wszystkiego");
-	//rysuj_graf(graf_metis_funkcje, "graf_metis_funkcje");
+	rysuj_graf(graf_pliki, "Graf_plikow");
+	cout << "-";
+	rysuj_graf(graf_funkcje, "Graf_funkcji");
+	cout << "-";
+	rysuj_graf(graf_funkcje_moduly, "Graf_funkcje_moduly");
+	cout << "-";
+	rysuj_graf(graf_bez_polaczen, "Graf_bez_polaczen");
+	cout << "-";
+	rysuj_graf(graf_modul, "Graf_modulu");
+	cout << "-";
+	rysuj_graf(graf_pliki_modul, "Graf_pliki_moduly");
+	cout << "-";
+	rysuj_graf(graf_pliki_funkcje, "Graf_pliki_funkcje");
+	cout << "-";
+	rysuj_graf(graf_metis_funkcje, "Graf_metis_funkcje");
+	cout << "-";
+	rysuj_graf(graf_wszystko, "Graf_wszystko");
+	cout << "-";
 	usun_tempa();
 }
 

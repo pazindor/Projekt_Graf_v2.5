@@ -4,6 +4,7 @@
 
 void graf::Graf::znajdz_definicje_funkcji() {
 	for (auto &_ktory_plik : pliki) {
+		
 		_ktory_plik.znajdz_funkcje_w_pliku();
 
 		for (const auto& _funkcja_pliku : _ktory_plik.funkcje) {

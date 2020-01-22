@@ -54,9 +54,6 @@
     <ClCompile Include="Bartek\znajdz_funkcje_i_wagi_pomiedzy_plikami.cpp">
       <Filter>Pliki zasobów\Bartek</Filter>
     </ClCompile>
-    <ClCompile Include="Wicher\polaczenie_modulu_z_plikiem.cpp">
-      <Filter>Pliki zasobów\Wicher</Filter>
-    </ClCompile>
     <ClCompile Include="Patryk\Pozyskanie_wstepnych_danych.cpp">
       <Filter>Pliki zasobów\Patryk</Filter>
     </ClCompile>
@@ -99,14 +96,20 @@
     <ClCompile Include="Bartek\Metis.cpp">
       <Filter>Pliki zasobów\Bartek</Filter>
     </ClCompile>
-    <ClCompile Include="Patryk\przypisuje_funkcje_i_pliki_do_modulow.cpp">
-      <Filter>Pliki zasobów\Patryk</Filter>
-    </ClCompile>
     <ClCompile Include="Wicher\zlozonosc_cyklomatyczna.cpp">
       <Filter>Pliki zasobów\Wicher</Filter>
     </ClCompile>
+    <ClCompile Include="Patryk\kopiowanie_do_funkcji.cpp">
+      <Filter>Pliki zasobów\Patryk</Filter>
+    </ClCompile>
+    <ClCompile Include="Patryk\polaczenia_i_wagi_modulow.cpp">
+      <Filter>Pliki zasobów\Patryk</Filter>
+    </ClCompile>
     <ClCompile Include="Ewelina\aktualna_wersja_gita.cpp">
       <Filter>Pliki zasobów\Ewelina</Filter>
+    </ClCompile>
+    <ClCompile Include="Wicher\polaczenie_modulu_z_plikiem.cpp">
+      <Filter>Pliki zasobów\Wicher</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

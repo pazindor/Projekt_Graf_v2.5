@@ -10,6 +10,8 @@ int main() {
 
 	program->wykonaj();
 
+	std::cout << "--------" << std::endl;
+	
 	menu();
 
 	delete program;

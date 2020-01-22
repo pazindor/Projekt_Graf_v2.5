@@ -26,14 +26,12 @@ namespace Wojtas {
 	}
 
 	std::string odcinanie_poczatku(std::string slowo, std::string poczatek) {
-		if (slowo.find(poczatek) != std::string::npos) {
+		while(slowo.find(poczatek) != std::string::npos) {
 			size_t pozycja = slowo.find(poczatek);
 			slowo = slowo.erase(0, pozycja + poczatek.length());
-			return slowo;
+			
 		}
-		else {
-			return slowo;
-		}
+		return slowo;
 	}
 
 	std::string usuwanie_tabulacji(std::string linia) {

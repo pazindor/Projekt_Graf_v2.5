@@ -46,11 +46,13 @@ bool graf::Graf::sprawdz_czy_cos_jest_w_inpucie()
 	closedir(sciezka);
 	if (sprawdzam)
 	{
+		cout << "Wykonuje zadanie dla plikow w folderze input" << endl;
 		znajdz_pliki("..\\input\\");
 		return 1;
 	}
 	else
 	{
+		cout << "Wykonuje zadanie dla plikow programu" << endl;
 		znajdz_pliki(".\\");
 		return 0;
 	}

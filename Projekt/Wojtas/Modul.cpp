@@ -50,6 +50,7 @@ void modul::Modul::znajdz_elementy_modulu(std::fstream &otwarty_plik) {
 								}
 								else break;
 								//za pomoca licznika sprawdza wystepowanie nazwy w vectorze
+								nazwa_slowa = Wojtas::odcinanie_poczatku(nazwa_slowa, "::");
 								dodaj_niepowtarzajacy_sie_modul(nazwa_slowa);
 								break;
 							}
@@ -78,6 +79,7 @@ void modul::Modul::znajdz_funkcje_w_module(std::string slowo) {
 			}
 		}
 		if (licznik == funkcje_modulu.size()) {
+			nazwa_slowa = Wojtas::odcinanie_poczatku(nazwa_slowa, "::");
 			funkcja::Funkcja wchodzaca_funkcja(nazwa_slowa);
 			funkcje_modulu.push_back(wchodzaca_funkcja);
 		}

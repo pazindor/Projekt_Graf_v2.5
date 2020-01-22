@@ -23,9 +23,11 @@ void graf::Graf::znajdz_przestrzenie_nazw() {
 				przestrzenie_nazw.push_back(_namespace.nazwa_przestrzeni);
 			}
 		}
-		
+	
 	}
-	/*for (int i = 0; i < przestrzenie_nazw.size(); i++) {
+	/*
+	for (int i = 0; i < przestrzenie_nazw.size(); i++) {
 		std::cout << przestrzenie_nazw[i].nazwa_przestrzeni << std::endl;
-	}*/
+	}
+	*/
 }

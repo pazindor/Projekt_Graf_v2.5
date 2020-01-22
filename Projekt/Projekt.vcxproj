@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -27,10 +27,11 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Mateusz\rysuj_graf.cpp" />
     <ClCompile Include="Mateusz\znajdz_polaczenia_miedzy_funkcjami.cpp" />
+    <ClCompile Include="Patryk\kopiowanie_do_funkcji.cpp" />
+    <ClCompile Include="Patryk\polaczenia_i_wagi_modulow.cpp" />
     <ClCompile Include="Patryk\Pozyskanie_wstepnych_danych.cpp" />
     <ClCompile Include="Patryk\przygotuj_txt_dla_paradigma.cpp" />
     <ClCompile Include="Patryk\zamiana_na_stringi_do_graphitza.cpp" />
-    <ClCompile Include="Patryk\przypisuje_funkcje_i_pliki_do_modulow.cpp" />
     <ClCompile Include="Patryk\znajdz_polaczenia_pomiedzy_plikami.cpp" />
     <ClCompile Include="Wicher\polaczenie_modulu_z_plikiem.cpp" />
     <ClCompile Include="Wicher\zlozonosc_cyklomatyczna.cpp" />

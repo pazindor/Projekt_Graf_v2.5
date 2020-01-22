@@ -1,7 +1,6 @@
 ﻿#pragma once
 #include "..\Graf.h"
 #include <sstream>
-//trezeba zmienic definicje w headerze
 
 using namespace std;
 
@@ -63,7 +62,7 @@ string graf::Graf::zamien_na_string_dla_plikow_do_grafu()
 			}
 		}
 	}
-	tekst = poczatek +  temp + "}";	//trzeba pamietac o zamknieciu nawiasu klamrowego
+	tekst = poczatek + temp + "}";	//trzeba pamietac o zamknieciu nawiasu klamrowego
 
 	//std::cout << tekst << endl;		//tescik
 	return tekst;
@@ -79,15 +78,17 @@ string graf::Graf::zamien_na_string_dla_funkcji_do_grafu()
 	std::string temp;
 	std::string tekst;
 	std::ostringstream waga_polaczenia;		//definiuje przed bo po co definiowac to samo wiele razy
+	string zlozonosc;
 
 	std::string node = "node[shape = box fillcolor = \"#99ffff:lightblue\" style = \"filled\" gradientangle = 120]\n"; //żeby to ładniej wyglądało
 	std::string styl_strzalki = "[color=\"blue\", penwidth = 1.2]";	//żeby strzalki inny kolor mialy
 
 	temp += node;
 
+
 	for (size_t i = 0; i < wszystkie_funkcje_we_wszystkich_plikach.size(); i++)
 	{
-		temp += "\"" + wszystkie_funkcje_we_wszystkich_plikach[i].nazwa_funkcji + "\";\n";
+		temp += "\"" + wszystkie_funkcje_we_wszystkich_plikach[i].nazwa_funkcji + "(" + wszystkie_funkcje_we_wszystkich_plikach[i].zlozonosc_string + ")\";\n";
 	}
 
 	for (size_t i = 0; i < wszystkie_funkcje_we_wszystkich_plikach.size(); i++)
@@ -95,16 +96,20 @@ string graf::Graf::zamien_na_string_dla_funkcji_do_grafu()
 		//std::cout << wszystkie_funkcje_we_wszystkich_plikach[i].nazwa_funkcji << endl;
 		for (size_t j = 0; j < wszystkie_funkcje_we_wszystkich_plikach[i].polaczenia_miedzy_funkcjami.size(); j++)
 		{
-			if (wszystkie_funkcje_we_wszystkich_plikach[i].polaczenia_miedzy_funkcjami[j].waga != 0)		//drugi warunek po to zeby nie rysowalo polaczen z waga 0
+			if (wszystkie_funkcje_we_wszystkich_plikach[i].polaczenia_miedzy_funkcjami[j].waga != 0)
 			{
+				for (int k = 0; k < wszystkie_funkcje_we_wszystkich_plikach.size(); k++) {
+					if (wszystkie_funkcje_we_wszystkich_plikach[k].nazwa_funkcji == wszystkie_funkcje_we_wszystkich_plikach[i].polaczenia_miedzy_funkcjami[j].nazwa_polaczonego_elementu) {
+						zlozonosc = wszystkie_funkcje_we_wszystkich_plikach[k].zlozonosc_string;
+					}
+				}
 				//std::cout << wszystkie_funkcje_we_wszystkich_plikach[i].nazwa_funkcji << endl;
 				waga_polaczenia << wszystkie_funkcje_we_wszystkich_plikach[i].polaczenia_miedzy_funkcjami[j].waga;
 				std::string sila_polaczenia = waga_polaczenia.str();
 				waga_polaczenia.str("");
 				waga_polaczenia.clear();
 
-				temp += "\"" + wszystkie_funkcje_we_wszystkich_plikach[i].nazwa_funkcji + "\"" + strzalka + "\"" + wszystkie_funkcje_we_wszystkich_plikach[i].polaczenia_miedzy_funkcjami[j].nazwa_polaczonego_elementu + "\"" + "[ label = \"" + sila_polaczenia + "\" ]" + styl_strzalki + ";\n";
-
+				temp += "\"" + wszystkie_funkcje_we_wszystkich_plikach[i].nazwa_funkcji + "(" + wszystkie_funkcje_we_wszystkich_plikach[i].zlozonosc_string + ")\"" + strzalka + "\"" + wszystkie_funkcje_we_wszystkich_plikach[i].polaczenia_miedzy_funkcjami[j].nazwa_polaczonego_elementu + "(" + zlozonosc + ")\"" + "[ label = \"" + sila_polaczenia + "\" ]" + styl_strzalki + ";\n";
 			}
 		}
 	}
@@ -126,18 +131,30 @@ string graf::Graf::zamien_na_string_dla_modulu()
 	std::string temp = "";
 	std::string tekst;
 	std::string sila_polaczenia = "999";
+	std::ostringstream waga_polaczenia;
+
 
 	temp += node;
 
-	for (unsigned int i = 0; i < przestrzenie_nazw.size(); i++)
-	{
-		temp += "\"" + przestrzenie_nazw[i].nazwa_przestrzeni + "\";\n";
-	}
+	if (przestrzenie_nazw.size() < 1)
+		for (unsigned int i = 0; i < przestrzenie_nazw.size(); i++)
+		{
+			temp += "\"" + przestrzenie_nazw[i].nazwa_przestrzeni + "\";\n";
+		}
 
 	for (unsigned int i = 0; i < przestrzenie_nazw.size(); i++)
 	{
+		if (przestrzenie_nazw[i].polaczenia_miedzy_namespaceami.size() < 1)
+		{
+			temp += "\"" + przestrzenie_nazw[i].nazwa_przestrzeni + "\"\n";
+		}
 		for (unsigned int j = 0; j < przestrzenie_nazw[i].polaczenia_miedzy_namespaceami.size(); j++)
 		{
+			waga_polaczenia << przestrzenie_nazw[i].polaczenia_miedzy_namespaceami[j].waga;
+			std::string sila_polaczenia = waga_polaczenia.str();
+			waga_polaczenia.str("");
+			waga_polaczenia.clear();
+
 			temp += "\"" + przestrzenie_nazw[i].nazwa_przestrzeni + "\"" + strzalka + "\"" + przestrzenie_nazw[i].polaczenia_miedzy_namespaceami[j].nazwa_polaczonego_elementu + "\"" + "[ label = \"" + sila_polaczenia + "\" ]" + styl_strzalki + ";\n";
 		}
 	}
@@ -169,7 +186,7 @@ string graf::Graf::string_dla_plikow_i_funkcji(string pierwsza_czesc_stringa, st
 			string ile_linii = ss.str();
 			ss.str("");
 			ss.clear();
-			temp = "\"" + pliki[i].nazwa_pliku + "(" + ile_linii + ")\"->\"" + pliki[i].funkcje[j].nazwa_funkcji + "\"" + styl_strzalki + ";\n";
+			temp = "\"" + pliki[i].funkcje[j].nazwa_funkcji + "(" + pliki[i].funkcje[j].zlozonosc_string + ")" + "\"->\"" + pliki[i].nazwa_pliku + "(" + ile_linii + ")" + "\"" + styl_strzalki + ";\n";
 			//std::cout << temp << endl;";\n";
 			trzecia_czesc_stringa = trzecia_czesc_stringa + temp;
 		}
@@ -190,31 +207,10 @@ string graf::Graf::string_dla_plikow_i_modulu(string pierwsza_czesc_stringa, str
 	pierwsza_czesc_stringa.erase(pierwsza_czesc_stringa.length() - 1, pierwsza_czesc_stringa.length());
 	druga_czesc_stringa.erase(0, 11);
 	druga_czesc_stringa.erase(druga_czesc_stringa.length() - 1, druga_czesc_stringa.length());
-	string trzecia_czesc_stringa;
 	string temp;
-	string ile_linii;
 	ostringstream ss;
-	std::string styl_strzalki = "[color=\"green\", penwidth = 1.2]";	//¿eby strzalki inny kolor mialy
 
-	for (unsigned int i = 0; i < przestrzenie_nazw.size(); i++)
-	{
-		for (unsigned int j = 0; j < przestrzenie_nazw[i].polaczenia_z_plikami.size(); j++)
-		{
-			for (unsigned int szukam_pliku = 0; szukam_pliku < pliki.size(); szukam_pliku++)
-			{
-				if (pliki[szukam_pliku].nazwa_pliku == przestrzenie_nazw[i].polaczenia_z_plikami[j].nazwa_polaczonego_elementu)
-				{
-					ss << pliki[szukam_pliku].ilosc_linijek_kodu;
-					ile_linii = ss.str();
-					ss.str("");
-					ss.clear();
-				}
-			}
-			temp = "\"" + przestrzenie_nazw[i].nazwa_przestrzeni + "\"->\"" + przestrzenie_nazw[i].polaczenia_z_plikami[j].nazwa_polaczonego_elementu + "(" + ile_linii + ")\"" + styl_strzalki + ";\n";
-			trzecia_czesc_stringa = trzecia_czesc_stringa + temp;
-		}
-	}
-	string scalone = poczatek + pierwsza_czesc_stringa + druga_czesc_stringa + trzecia_czesc_stringa + "}";
+	string scalone = poczatek + pierwsza_czesc_stringa + druga_czesc_stringa + "}";
 	return scalone;
 }
 
@@ -234,12 +230,12 @@ string graf::Graf::string_dla_funkcji_i_modulu(string pierwsza_czesc_stringa, st
 
 	for (unsigned int i = 0; i < przestrzenie_nazw.size(); i++)
 	{
-		for (unsigned int j = 0; j < przestrzenie_nazw[i].polaczenia_z_funkcjami.size(); j++)
+		for (unsigned int j = 0; j < przestrzenie_nazw[i].funkcje_modulu.size(); j++)
 		{
-			temp = "\"" + przestrzenie_nazw[i].nazwa_przestrzeni + "\"->\"" + przestrzenie_nazw[i].polaczenia_z_funkcjami[j].nazwa_polaczonego_elementu + "\"" + styl_strzalki + ";\n";
+			temp = "\"" + przestrzenie_nazw[i].funkcje_modulu[j].nazwa_funkcji + "(" + przestrzenie_nazw[i].funkcje_modulu[j].zlozonosc_string + ")" + "\"->\"" + przestrzenie_nazw[i].nazwa_przestrzeni + "\"" + styl_strzalki + ";\n";
 			trzecia_czesc_stringa = trzecia_czesc_stringa + temp;
 		}
-	
+
 	}
 	string scalone = poczatek + pierwsza_czesc_stringa + druga_czesc_stringa + trzecia_czesc_stringa + "}";
 	return scalone;
@@ -247,15 +243,50 @@ string graf::Graf::string_dla_funkcji_i_modulu(string pierwsza_czesc_stringa, st
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-string graf::Graf::string_dla_wszystkiego(string pliki_moduly, string pliki_funkcje, string funkcje_moduly)
+string graf::Graf::string_dla_funkcji_i_modulu_bez_polaczen(string polaczenia_modulow)
+{
+	std::string poczatek = "digraph G {\nbgcolor=\"#66cc99:#009966\"\n";
+	polaczenia_modulow.erase(0, 11);
+	polaczenia_modulow.erase(polaczenia_modulow.length() - 1, polaczenia_modulow.length());
+	string trzecia_czesc_stringa;
+	string temp;
+	ostringstream ss;
+	std::string styl_strzalki = "[color=\"orange\", penwidth = 1.2]";	//¿eby strzalki inny kolor mialy
+
+	std::string node = "node[shape = box fillcolor = \"#99ffff:lightblue\" style = \"filled\" gradientangle = 120]\n";
+
+
+	trzecia_czesc_stringa += node;
+	for (size_t i = 0; i < wszystkie_funkcje_we_wszystkich_plikach.size(); i++)
+	{
+		trzecia_czesc_stringa += "\"" + wszystkie_funkcje_we_wszystkich_plikach[i].nazwa_funkcji + "(" + wszystkie_funkcje_we_wszystkich_plikach[i].zlozonosc_string + ")\";\n";
+	}
+
+
+
+
+	for (unsigned int i = 0; i < przestrzenie_nazw.size(); i++)
+	{
+		for (unsigned int j = 0; j < przestrzenie_nazw[i].funkcje_modulu.size(); j++)
+		{
+			temp = "\"" + przestrzenie_nazw[i].funkcje_modulu[j].nazwa_funkcji + "(" + przestrzenie_nazw[i].funkcje_modulu[j].zlozonosc_string + ")" + "\"->\"" + przestrzenie_nazw[i].nazwa_przestrzeni + "\"" + styl_strzalki + ";\n";
+			trzecia_czesc_stringa = trzecia_czesc_stringa + temp;
+		}
+
+	}
+	string scalone = poczatek + polaczenia_modulow + trzecia_czesc_stringa + "}";
+	return scalone;
+}
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+string graf::Graf::string_dla_wszystkiego(string pliki_funkcje, string funkcje_moduly)
 {
 	string poczatek = "digraph G {";
-	pliki_moduly.erase(0, 11);
-	pliki_moduly.erase(pliki_moduly.length() - 1, pliki_moduly.length());
 	pliki_funkcje.erase(0, 11);
 	pliki_funkcje.erase(pliki_funkcje.length() - 1, pliki_funkcje.length());
 	funkcje_moduly.erase(0, 11);
 	funkcje_moduly.erase(funkcje_moduly.length() - 1, funkcje_moduly.length());
-	string scalone = poczatek + pliki_funkcje + pliki_moduly + funkcje_moduly + "}";
+	string scalone = poczatek + pliki_funkcje + funkcje_moduly + "}";
 	return scalone;
 }
