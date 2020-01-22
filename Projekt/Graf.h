@@ -153,6 +153,8 @@ namespace graf {
 
 		std::string przygotujPlikZFunkcjamiDlaMetisa();//									   || -> Bartlomiej Zieja
 
+		std::string dodaj_wersje(string);//													   || -> Patryk B³oniarz	
+
 		void pobierzWersjeGrafu();//			                                             
 
 		void rysuj_graf(std::string do_rysowania_grafu, std::string nazwa_pliku);//GOTOWE      || -> Matuesz Wich i Wojtek // Mateusz Witkowski

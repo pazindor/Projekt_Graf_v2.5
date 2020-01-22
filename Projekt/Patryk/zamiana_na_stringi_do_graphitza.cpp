@@ -11,8 +11,8 @@ string graf::Graf::zamien_na_string_dla_plikow_do_grafu()
 	std::string temp;
 	std::string tekst;
 
-	std::string node = "node [shape=folder fillcolor=\"orange:yellow\" style=\"filled\" gradientangle=120]\n"; //żeby to ładniej wyglądało
-	std::string styl_strzalki = "[color=\"red\", penwidth = 1.2]";	//żeby strzalki inny kolor mialy
+	std::string node = "node [shape=folder fillcolor=\"#99CCFF:#0066CC\" style=\"filled\" gradientangle=120]\n"; //żeby to ładniej wyglądało
+	std::string styl_strzalki = "[color=\"#3366FF\", penwidth = 1.2]";	//żeby strzalki inny kolor mialy
 
 	std::ostringstream ss;	//plik.ilosc_linijek_kodu	
 	std::ostringstream ss2;	//dla obydwu
@@ -80,8 +80,8 @@ string graf::Graf::zamien_na_string_dla_funkcji_do_grafu()
 	std::ostringstream waga_polaczenia;		//definiuje przed bo po co definiowac to samo wiele razy
 	string zlozonosc;
 
-	std::string node = "node[shape = box fillcolor = \"#99ffff:lightblue\" style = \"filled\" gradientangle = 120]\n"; //żeby to ładniej wyglądało
-	std::string styl_strzalki = "[color=\"blue\", penwidth = 1.2]";	//żeby strzalki inny kolor mialy
+	std::string node = "node[shape = box fillcolor = \"#FF3366:#CC3366\" style = \"filled\" gradientangle = 120]\n"; //żeby to ładniej wyglądało
+	std::string styl_strzalki = "[color=\"#990033\", penwidth = 1.2]";	//żeby strzalki inny kolor mialy
 
 	temp += node;
 
@@ -126,8 +126,8 @@ string graf::Graf::zamien_na_string_dla_modulu()
 {
 	std::string strzalka = "->";
 	std::string poczatek = "digraph G {\nbgcolor=\"#66cc99:#009966\"\n";
-	std::string node = "node [shape=diamond fillcolor=\"#de00ba:#fdb0aa\" style=\"filled\" gradientangle=120]\n";
-	std::string styl_strzalki = "[color=\"#FDFF56\", penwidth = 2]";
+	std::string node = "node [shape=diamond fillcolor=\"#FFCC66:#FFFF99\" style=\"filled\" gradientangle=120]\n";
+	std::string styl_strzalki = "[color=\"#996600\", penwidth = 1.2]";
 	std::string temp = "";
 	std::string tekst;
 	std::string sila_polaczenia = "999";
@@ -175,7 +175,7 @@ string graf::Graf::string_dla_plikow_i_funkcji(string pierwsza_czesc_stringa, st
 	string trzecia_czesc_stringa;
 	string temp;
 	ostringstream ss;
-	std::string styl_strzalki = "[color=\"purple\", penwidth = 1.2]";	//¿eby strzalki inny kolor mialy
+	std::string styl_strzalki = "[color=\"#871F78\", penwidth = 1.2]";	//¿eby strzalki inny kolor mialy
 
 
 	for (unsigned int i = 0; i < pliki.size(); i++)
@@ -226,7 +226,7 @@ string graf::Graf::string_dla_funkcji_i_modulu(string pierwsza_czesc_stringa, st
 	string trzecia_czesc_stringa;
 	string temp;
 	ostringstream ss;
-	std::string styl_strzalki = "[color=\"orange\", penwidth = 1.2]";	//¿eby strzalki inny kolor mialy
+	std::string styl_strzalki = "[color=\"#FF7F00\", penwidth = 1.2]";	//¿eby strzalki inny kolor mialy
 
 	for (unsigned int i = 0; i < przestrzenie_nazw.size(); i++)
 	{
@@ -251,9 +251,9 @@ string graf::Graf::string_dla_funkcji_i_modulu_bez_polaczen(string polaczenia_mo
 	string trzecia_czesc_stringa;
 	string temp;
 	ostringstream ss;
-	std::string styl_strzalki = "[color=\"orange\", penwidth = 1.2]";	//¿eby strzalki inny kolor mialy
+	std::string styl_strzalki = "[color=\"#FF7F00\", penwidth = 1.2]";	//¿eby strzalki inny kolor mialy
 
-	std::string node = "node[shape = box fillcolor = \"#99ffff:lightblue\" style = \"filled\" gradientangle = 120]\n";
+	std::string node = "node[shape = box fillcolor = \"#FF3366:#CC3366\" style = \"filled\" gradientangle = 120]\n";
 
 
 	trzecia_czesc_stringa += node;
@@ -288,5 +288,13 @@ string graf::Graf::string_dla_wszystkiego(string pliki_funkcje, string funkcje_m
 	funkcje_moduly.erase(0, 11);
 	funkcje_moduly.erase(funkcje_moduly.length() - 1, funkcje_moduly.length());
 	string scalone = poczatek + pliki_funkcje + funkcje_moduly + "}";
+	return scalone;
+}
+
+string graf::Graf::dodaj_wersje(string gdzie_dodac)
+{
+	string label = "label = \" version: " + version + "\" fontcolor = \"black\" fontsize = 26";
+	gdzie_dodac.erase(gdzie_dodac.length() - 1, gdzie_dodac.length());
+	string scalone = gdzie_dodac + label + "}";
 	return scalone;
 }

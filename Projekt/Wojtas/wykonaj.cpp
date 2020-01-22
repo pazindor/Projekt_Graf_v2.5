@@ -42,23 +42,23 @@ void graf::Graf::wykonaj() {
 	std::string do_txt_moduly_funkcje = przygotuj_txt_dla_modulow_i_funkcji_do_visual_paradigma(do_txt_moduly, do_txt_funkcje);
 	przygotuj_txt_dla_wszystkiego_do_visual_paradigma(do_txt_pliki_funkcje, do_txt_moduly_funkcje);
 
-	rysuj_graf(graf_pliki, "Graf_plikow");
+	rysuj_graf(dodaj_wersje(graf_pliki), "Graf_plikow");
 	cout << "-";
-	rysuj_graf(graf_funkcje, "Graf_funkcji");
+	rysuj_graf(dodaj_wersje(graf_funkcje), "Graf_funkcji");
 	cout << "-";
-	rysuj_graf(graf_funkcje_moduly, "Graf_funkcje_moduly");
+	rysuj_graf(dodaj_wersje(graf_funkcje_moduly), "Graf_funkcje_moduly");
 	cout << "-";
-	rysuj_graf(graf_bez_polaczen, "Graf_bez_polaczen");
+	rysuj_graf(dodaj_wersje(graf_bez_polaczen), "Graf_bez_polaczen");
 	cout << "-";
-	rysuj_graf(graf_modul, "Graf_modulu");
+	rysuj_graf(dodaj_wersje(graf_modul), "Graf_modulu");
 	cout << "-";
-	rysuj_graf(graf_pliki_modul, "Graf_pliki_moduly");
+	rysuj_graf(dodaj_wersje(graf_pliki_modul), "Graf_pliki_moduly");
 	cout << "-";
-	rysuj_graf(graf_pliki_funkcje, "Graf_pliki_funkcje");
+	rysuj_graf(dodaj_wersje(graf_pliki_funkcje), "Graf_pliki_funkcje");
 	cout << "-";
-	rysuj_graf(graf_metis_funkcje, "Graf_metis_funkcje");
+	rysuj_graf(dodaj_wersje(graf_metis_funkcje), "Graf_metis_funkcje");
 	cout << "-";
-	rysuj_graf(graf_wszystko, "Graf_wszystko");
+	rysuj_graf(dodaj_wersje(graf_wszystko), "Graf_wszystko");
 	cout << "-";
 	usun_tempa();
 }

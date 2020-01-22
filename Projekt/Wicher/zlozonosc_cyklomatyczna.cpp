@@ -16,35 +16,51 @@ void graf::Graf::zlozonosc_cyklomatyczna()
 {
 	int licznik_klamer = 0;
 
-	const int rozmiar_tablicy = 2;
-
 	std::fstream otwarty_plik;
 	std::string linia;
 
-	for (int plik = 0; plik < pliki.size(); plik++)	//otwiera kazdy plik po kolei
+	for (int plik = 0; plik < pliki.size(); plik++)
 	{
-		otwarty_plik.open(pliki[plik].nazwa_pliku, std::ios::in);
+		otwarty_plik.open(pliki[plik].nazwa_pliku, std::ios::in || std::ios::out);
 
-		while (getline(otwarty_plik, linia))	//po kolei zwczytuje kazda linie
+		for (int ktora_funkcja = 0; ktora_funkcja < wszystkie_funkcje_we_wszystkich_plikach.size(); ktora_funkcja++)
 		{
-			Wojtas::szukanie_klamer(linia, licznik_klamer);	//szuka klamr zeby znalezc cialo funkcji
-
-			if (licznik_klamer != 0)	//jesli licznik klamr jest rozny od 0 to znaczy ze jestesmy w ciele funkcji
+			do
 			{
-				for (int ktora_funkcja = 0; ktora_funkcja < wszystkie_funkcje_we_wszystkich_plikach.size(); ktora_funkcja++)	//iteruje po nazwach funkcji
+				while (!otwarty_plik.eof())
 				{
-					if (linia.find(wszystkie_funkcje_we_wszystkich_plikach[ktora_funkcja].nazwa_funkcji) != std::string::npos)	//szuka kazdej funkcji
+					getline(otwarty_plik, linia);
+
+					if (linia.find(wszystkie_funkcje_we_wszystkich_plikach[ktora_funkcja].nazwa_funkcji) != std::string::npos)
 					{
-						if ((linia.find("if ") != std::string::npos) || (linia.find("case") != std::string::npos))	//jesli znajdzie slowo klucz to zwieksza zlozonosc
-						{
-							wszystkie_funkcje_we_wszystkich_plikach[ktora_funkcja].zlozonosc++;
-							cout << "WEWNETRZNY IF" << endl;
-						}
-						cout << "ZEWNETRZNY IF" << endl;
+						Wojtas::szukanie_klamer(linia, licznik_klamer);
 					}
-					cout << " Out" << endl;
+				}
+			} while (licznik_klamer == 0);
+
+
+			while (licznik_klamer != 0)
+			{
+				while (!otwarty_plik.eof())
+				{
+					getline(otwarty_plik, linia);
+
+					if ((linia.find("if") != string::npos) || (linia.find("case") != string::npos))
+					{
+						wszystkie_funkcje_we_wszystkich_plikach[ktora_funkcja].zlozonosc++;
+					}
+					Wojtas::szukanie_klamer(linia, licznik_klamer);
 				}
 			}
 		}
+		otwarty_plik.close();
 	}
+
+	//Wypisanie
+	for (int i = 0; i < wszystkie_funkcje_we_wszystkich_plikach.size(); i++)
+	{
+		std::cout << wszystkie_funkcje_we_wszystkich_plikach[i].zlozonosc << std::endl;
+
+	}
+
 }
