@@ -6,7 +6,7 @@
 
 void plik::Plik::znajdz_funkcje_w_pliku() {
 	std::vector<std::string> module_keywords = { "class", "namespace", "struct" };
-	std::vector<std::string> key_words{ "int", "void", "string", "vector" };
+	std::vector<std::string> key_words{ "int", "void", "string", "vector", "bool","double"};
 	std::vector<std::string> przedrostki{ "inline", "const" };
 	std::fstream plik_operacyjny;
 	std::string linia;
