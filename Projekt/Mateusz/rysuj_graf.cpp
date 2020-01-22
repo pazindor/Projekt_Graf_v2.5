@@ -14,9 +14,9 @@ void graf::Graf::rysuj_graf(std::string do_rysowania_graphu, std::string nazwa_p
 	//plik_wyjsciowy.close();							//zamykanie pliku
 
 
-
+	string sciezka = "..\\graphviz-2.38\\release\\bin\\dot.exe";
 	//string sciezka = "C:\\inzO\\Graphviz2.38\\bin\\dot.exe"; 
-	string sciezka ="..\\graphviz-2.38\\release\\bin\\dot.exe";
+	//string sciezka = "D:\\STUDIA\\III_Semestr\\InzynieriaOprogramowania\\Grafmaster\\bin\\dot.exe";	//sciezka do pliku
 		//sciezka do pliku
 	string tymczasowy = "temp.dot";		//tworzy tymczasowy plik o nazwie temp.dot
 	string wyjscie = "..\\output\\" + nazwa_pliku + ".png";			//koncowy plik o rozszerzeniu png

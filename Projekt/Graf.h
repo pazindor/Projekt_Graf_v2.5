@@ -100,7 +100,7 @@ namespace graf {
 		//znajduje scierzki do katalogow zeby je pozniej przeszukac
 		void poszukaj_katalogow(const string sciezka); //                                               || -> Patryk
 		//sprawdza inputa i decyduje ktora wersja sprawdzania
-		void sprawdz_czy_cos_jest_w_inpucie();
+		bool sprawdz_czy_cos_jest_w_inpucie();
 
 		//dodaje liczbe linijek do pola Plik::ilosc_linijek_kodu dla kazdego pliku z vectora
 		void policz_linijki_kodu_dla_pliku(); //liczy linijki kodu dla pliku                   || -> Ewelina

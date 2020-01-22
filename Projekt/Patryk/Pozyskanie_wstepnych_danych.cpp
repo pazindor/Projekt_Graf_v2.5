@@ -29,7 +29,7 @@ void graf::Graf::poszukaj_katalogow(const string sciezka)
 	}
 }
 
-void graf::Graf::sprawdz_czy_cos_jest_w_inpucie()
+bool graf::Graf::sprawdz_czy_cos_jest_w_inpucie()
 {
 	bool sprawdzam = FALSE;
 	struct dirent* plik;
@@ -47,10 +47,12 @@ void graf::Graf::sprawdz_czy_cos_jest_w_inpucie()
 	if (sprawdzam)
 	{
 		znajdz_pliki("..\\input\\");
+		return 1;
 	}
 	else
 	{
 		znajdz_pliki(".\\");
+		return 0;
 	}
 }
 
