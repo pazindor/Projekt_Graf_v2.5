@@ -13,7 +13,7 @@ void graf::Graf::wykonaj() {
 	znajdz_definicje_funkcji();
 	znajdz_funkcje_i_wagi_pomiedzy_plikami();
 	znajdz_polaczenia_miedzy_funkcjami();
-	//zlozonosc_cyklomatyczna();
+	zlozonosc_cyklomatyczna();
 	zlozonosc_na_stringa();
 
 	znajdz_przestrzenie_nazw();
