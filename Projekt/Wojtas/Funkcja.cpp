@@ -14,7 +14,7 @@ void funkcja::Funkcja::znajdz_polaczone_funkcje(Funkcja sprawdzana_fun, std::fst
 		
 			while (getline(otwarty_plik, linia)) {
 				Wojtas::szukanie_klamer(linia, licznik_klamer);
-				
+				//wyjscie z szukania gdy zamknie sie funkcja
 				if (licznik_klamer == 0) {
 					return;
 				}
