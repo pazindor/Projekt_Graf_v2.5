@@ -31,6 +31,7 @@ void graf::Graf::zlozonosc_cyklomatyczna()
 			{	//licznik klamer sluzacy do znajdywania ciala funcji
 				//od razu po read linie jest sprawdzana czy  nie ma klamry zamykajacej lub otwieracjacej
 				getline(otwarty_plik, linia);
+
 				if (linia.find( "graf::Graf::" + wszystkie_funkcje_we_wszystkich_plikach[ktora_funkcja].nazwa_funkcji + "()") == std::string::npos)
 				{
 					Wojtas::szukanie_klamer(linia, licznik_klamer);
