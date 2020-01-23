@@ -6,7 +6,6 @@ output
 Projekt/Release
 Projekt/x64
 Projekt/x86
-graphviz-2.38
 .vs
 Testy/.vs
 Testy/Debug
