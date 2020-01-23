@@ -21,18 +21,4 @@ void graf::Graf::znajdz_elementy_przestrzeni_nazw() {
 			
 		}
 	}
-	/*for (int i = 0; i < przestrzenie_nazw.size(); i++) {
-		std::cout << przestrzenie_nazw[i].nazwa_przestrzeni << " : " << std::endl;
-		for (int j = 0; j < przestrzenie_nazw[i].elementy_modulu.size(); j++) {
-			std::cout << "  " << przestrzenie_nazw[i].elementy_modulu[j] << std::endl;
-		}
-	}*/
-	/*
-	for (const auto& _przestrzen : przestrzenie_nazw) {
-		std::cout << _przestrzen.nazwa_przestrzeni << std::endl;
-		for (auto& funkcja : _przestrzen.funkcje_modulu) {
-			std::cout << "\t" << funkcja.nazwa_funkcji << std::endl;
-		}
-	}
-	*/
 }
