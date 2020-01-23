@@ -3,7 +3,6 @@
 
 
 void graf::Graf::znajdz_przestrzenie_nazw() {
-	//najpierw szukanie "domyslnych" przestrzeni
 	modul::Modul wchodza_przestrzen("std");
 	//przestrzenie_nazw.push_back(wchodza_przestrzen);
 	

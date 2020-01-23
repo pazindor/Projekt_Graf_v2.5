@@ -17,6 +17,7 @@ void plik::Plik::znajdz_funkcje_w_pliku() {
 		std::vector<std::string> slowa_linijki = Wojtas::dzielenie_na_slowa(linia);
 		int i = 0;
 		int licznik = 0;
+		//przechodzenie przez slowa typu const i inline
 		while(i < slowa_linijki.size()) {
 			for (auto& _przed : przedrostki) {
 				if (slowa_linijki[i].find(_przed) == std::string::npos) {
@@ -62,7 +63,6 @@ void plik::Plik::znajdz_funkcje_w_pliku() {
 		
 	}
 
-	
 	plik_operacyjny.close();
 }
 

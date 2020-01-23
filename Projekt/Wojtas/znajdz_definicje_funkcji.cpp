@@ -10,6 +10,7 @@ void graf::Graf::znajdz_definicje_funkcji() {
 		for (const auto& _funkcja_pliku : _ktory_plik.funkcje) {
 			unsigned int licznik_spr = 0;
 			//za pomoca tego licznika sprawdzam, ilosc NIEwystepowania tej nazwy w vectorze, przez co wiadomo kiedy push_backowac
+			//dodaje funkcje znalezioan w piku do zbioru wszystkich funkcji programu
 			for (auto& nr_funkcji : wszystkie_funkcje_we_wszystkich_plikach) {
 				if (_funkcja_pliku.nazwa_funkcji != nr_funkcji.nazwa_funkcji)
 					licznik_spr++;			

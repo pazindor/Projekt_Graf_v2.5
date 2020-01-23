@@ -10,6 +10,7 @@ void funkcja::Funkcja::znajdz_polaczone_funkcje(Funkcja sprawdzana_fun, std::fst
 	while (getline(otwarty_plik, linia)) {
 		if (linia.find(nazwa_funkcji) != std::string::npos)
 		{
+			//uzywane w ten sposob przed whilem i po whilu, w zaleznosci od tego jak kto daje klamry
 			Wojtas::szukanie_klamer(linia, licznik_klamer);
 		
 			while (getline(otwarty_plik, linia)) {
