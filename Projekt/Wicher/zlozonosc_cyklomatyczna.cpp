@@ -36,7 +36,7 @@ void graf::Graf::zlozonosc_cyklomatyczna()
 				{
 					Wojtas::szukanie_klamer(linia, licznik_klamer);
 
-					if (licznik_klamer != 0)	//gdy znajdzie
+					if (licznik_klamer != 0)	//gdy znajdzie juz jakas klamre
 					{
 						getline(otwarty_plik, linia);
 						Wojtas::szukanie_klamer(linia, licznik_klamer);
